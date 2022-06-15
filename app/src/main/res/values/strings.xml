@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">UnlockPatternApp</string>
+    <string name="save_text">save</string>
+    <string name="tap_me_text">Tap me</string>
+    <string name="show_text">Show</string>
+    <string name="password_text">password:</string>
+    <string name="confirm_text">confirm:</string>
+    <string name="change_password_text">change password</string>
+    <string name="check_text">check</string>
+    <string name="reset_text">reset</string>
+    <string name="super_secret_text_view_text">Super secret text view</string>
+    <string name="reset_password_text">reset password</string>
+
 </resources>
