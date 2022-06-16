@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="ui.start.StartFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -38,19 +39,11 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/red"
         android:text="@string/change_password_text"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/password_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Select your password by tapping" />
+
 
     <TextView
         android:id="@+id/password_text_view"
@@ -58,18 +51,21 @@
         android:layout_height="wrap_content"
         android:text="@string/password_text"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/confirm_password_text_view"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/password_input_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="4dp"
         android:textSize="20sp"
 
-        app:layout_constraintBottom_toBottomOf="@+id/password_text_view"
-        app:layout_constraintEnd_toEndOf="@id/confirm_password_input_text_view"
-        app:layout_constraintStart_toStartOf="@+id/confirm_password_input_text_view"
+
+        app:layout_constraintEnd_toEndOf="@+id/password_text_view"
+        app:layout_constraintStart_toStartOf="@+id/password_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/password_text_view"
         tools:text="*****" />
 
     <TextView
@@ -78,20 +74,20 @@
         android:layout_height="wrap_content"
         android:text="@string/confirm_text"
         android:textSize="20sp"
-
-        app:layout_constraintBottom_toTopOf="@+id/show_button"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toEndOf="@+id/password_input_text_view"
+        app:layout_constraintStart_toStartOf="@+id/password_input_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/password_input_text_view" />
 
     <TextView
         android:id="@+id/confirm_password_input_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:padding="4dp"
         android:textSize="20sp"
 
-
-        app:layout_constraintBottom_toBottomOf="@+id/confirm_password_text_view"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/confirm_password_text_view"
+        app:layout_constraintEnd_toEndOf="@+id/confirm_password_text_view"
+        app:layout_constraintStart_toStartOf="@+id/confirm_password_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password_text_view"
         tools:text="*****" />
 
     <Button

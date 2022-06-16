@@ -1,15 +1,16 @@
-package com.lexneoapps.unlockpatternapp.ui
+package com.lexneoapps.unlockpatternapp.ui.secret
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.lexneoapps.unlockpatternapp.R
-import com.lexneoapps.unlockpatternapp.databinding.FragmentCheckPasswordBinding
+import com.lexneoapps.unlockpatternapp.databinding.FragmentSecretBinding
 
-class CheckPasswordFragment : Fragment(R.layout.fragment_check_password) {
-    private var _binding: FragmentCheckPasswordBinding? = null
+class SecretFragment : Fragment(R.layout.fragment_secret) {
+    private var _binding: FragmentSecretBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,15 +18,16 @@ class CheckPasswordFragment : Fragment(R.layout.fragment_check_password) {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentCheckPasswordBinding.inflate(inflater, container, false)
+        _binding = FragmentSecretBinding.inflate(inflater, container, false)
         val view = binding.root
         return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
     }
+
+
 
     override fun onDestroyView() {
         super.onDestroyView()
