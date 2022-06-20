@@ -15,6 +15,7 @@ object PwUtil {
 
     //check if two password are the same with 0.5 +/- ponder
      fun checkIfSamePassword(f: List<Int>, s: List<Int>): Boolean {
+        if (f.size != s.size) return false
         for (i in f.indices) {
             if ((f[i] < (s[i] - s[i] * 0.5).toInt()) || (f[i] > (s[i] + s[i] * 0.5).toInt())) {
                 return false

@@ -65,4 +65,20 @@ class PwUtilTest{
         val result = PwUtil.checkIfSamePassword(listOf(5,10,25), listOf(10,20,50))
         assertThat(result).isTrue()
     }
+
+    @Test
+    fun `first list is smaller than second returns false`(){
+        val result = PwUtil.checkIfSamePassword(listOf(5,10), listOf(5,10,10))
+        assertThat(result).isFalse()
+
+    }
+
+    @Test
+    fun `first list is bigger than second returns false`(){
+        val result = PwUtil.checkIfSamePassword(listOf(5,10,10), listOf(5,10))
+        assertThat(result).isFalse()
+
+    }
+
+
 }
